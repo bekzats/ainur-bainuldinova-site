@@ -45,8 +45,15 @@
         height: 250px;
     }
     
+    /* General rule for mobile service images */
     .service-image img {
-        object-position: center top !important;
+        object-position: center top !important; 
+    }
+
+    /* Specific rule for 2nd and 3rd service images on mobile */
+    .services-grid .service-card:nth-child(2) .service-image img,
+    .services-grid .service-card:nth-child(3) .service-image img {
+        object-position: center 0% !important; /* Focus on very top */
     }
     
     .profile-image {
