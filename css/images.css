@@ -43,25 +43,30 @@
 @media (max-width: 480px) {
     /* General height for service images on mobile */
     .service-image {
-        height: 180px; 
+        height: 200px; /* Unified height for mobile */
     }
     
-    /* Specific height for 2nd and 3rd service images on mobile */
+    /* Remove specific height for 2nd and 3rd service images on mobile */
+    /* 
     .services-grid .service-card:nth-child(2) .service-image,
     .services-grid .service-card:nth-child(3) .service-image {
-        height: 150px; /* Make 2nd and 3rd shorter */
+        height: 150px; 
     }
+    */
 
-    /* General rule for mobile service images positioning */
+    /* General rule for mobile service images */
     .service-image img {
-        object-position: center top !important; 
+        object-fit: contain; /* Show the whole image */
+        /* object-position is less relevant with contain */
     }
 
-    /* Specific rule for 2nd and 3rd service images on mobile positioning */
+    /* Remove specific positioning rules */
+    /* 
     .services-grid .service-card:nth-child(2) .service-image img,
     .services-grid .service-card:nth-child(3) .service-image img {
-        object-position: center 0% !important; /* Focus on very top */
+        object-position: center 0% !important; 
     }
+    */
     
     .profile-image {
         height: 350px;
