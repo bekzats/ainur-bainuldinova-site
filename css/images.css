@@ -39,12 +39,17 @@
 }
 
 @media (max-width: 480px) {
-    /* Mobile aspect ratio and position for service backgrounds */
+    /* Mobile aspect ratio and default position for service backgrounds */
     .service-image {
-        aspect-ratio: 3 / 4; /* Taller aspect ratio for mobile */
-        background-position: center 25% !important; /* Position for mobile - adjust if needed */
+        aspect-ratio: 3 / 4; 
+        background-position: center 25% !important; /* Default for 2nd & 3rd */
     }
-    
+
+    /* Specific position for the FIRST service image on mobile */
+    .services-grid .service-card:nth-child(1) .service-image {
+         background-position: center 15% !important; /* Higher focus for the first */
+    }
+        
     .profile-image {
         height: 350px; 
     }
