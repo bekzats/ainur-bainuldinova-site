@@ -41,34 +41,22 @@
 }
 
 @media (max-width: 480px) {
-    /* General height for service images on mobile */
+    /* Drastically reduced height for mobile service images */
     .service-image {
-        height: 200px; /* Unified height for mobile */
+        height: 130px; /* Reduced height significantly */
     }
     
-    /* Remove specific height for 2nd and 3rd service images on mobile */
-    /* 
-    .services-grid .service-card:nth-child(2) .service-image,
-    .services-grid .service-card:nth-child(3) .service-image {
-        height: 150px; 
-    }
-    */
+    /* Remove specific height rules (already commented out) */
 
-    /* General rule for mobile service images */
+    /* Use cover fit but focus near the top */
     .service-image img {
-        object-fit: contain; /* Show the whole image */
-        /* object-position is less relevant with contain */
+        object-fit: cover; /* Back to cover */
+        object-position: center 10% !important; /* Focus near top */
     }
 
-    /* Remove specific positioning rules */
-    /* 
-    .services-grid .service-card:nth-child(2) .service-image img,
-    .services-grid .service-card:nth-child(3) .service-image img {
-        object-position: center 0% !important; 
-    }
-    */
+    /* Remove specific positioning rules (already commented out) */
     
     .profile-image {
-        height: 350px;
+        height: 350px; /* Keep profile image height */
     }
 } 
