@@ -41,25 +41,28 @@
 }
 
 @media (max-width: 480px) {
-    /* Drastically reduced height for mobile service images */
+    /* Default reduced height for mobile service images (2nd, 3rd) */
     .service-image {
-        height: 130px; /* Reduced height significantly */
+        height: 130px; 
     }
     
+    /* Specific TALLER height for the FIRST service image on mobile */
+    .services-grid .service-card:nth-child(1) .service-image {
+        height: 180px; /* Make the first one taller */
+    }
+
     /* Use cover fit but focus near the top */
     .service-image img {
-        object-fit: cover; /* Back to cover */
-        object-position: center 10% !important; /* Default for mobile */
+        object-fit: cover; 
+        object-position: center 10% !important; /* Default for 2nd & 3rd */
     }
 
     /* Specific position for the FIRST service image on mobile */
     .services-grid .service-card:nth-child(1) .service-image img {
-        object-position: center 20% !important; /* Adjust position for the first image */
+        object-position: center 20% !important; /* Keep 20% focus for the first */
     }
-
-    /* Remove specific positioning rules (already commented out) */
     
     .profile-image {
-        height: 350px; /* Keep profile image height */
+        height: 350px; 
     }
 } 
