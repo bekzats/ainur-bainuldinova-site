@@ -46,10 +46,10 @@
         height: 130px; 
     }
     
-    /* Use CONTAIN fit to ensure the whole image is visible */
+    /* Use COVER fit but focus MUCH lower */
     .service-image img {
-        object-fit: contain; /* Ensure whole image fits */
-        /* object-position is not needed with contain */
+        object-fit: cover; /* Back to cover */
+        object-position: center 70% !important; /* Focus much lower */
     }
     
     .profile-image {
