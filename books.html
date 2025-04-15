@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Олжас Сулейменов - Книги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --main-color: #000;
+            --accent-color: #c4161c;
+            --text-color: #333;
+            --light-gray: #f8f8f8;
+            --border-color: #ddd;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            margin-top: 10px;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .nav-dropdown > a {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+            background: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-dropdown > a:hover {
+            background: #f8f8f8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .dropdown-content a {
+            font-family: 'Georgia', serif;
+            font-size: 20px;
+            color: #000;
+            padding: 15px 25px;
+            border-left: 4px solid transparent;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f8f8;
+            border-left: 4px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-dropdown > a {
+                font-size: 28px;
+                padding: 20px 30px;
+                display: block;
+                text-align: center;
+                margin: 0 20px;
+            }
+
+            .dropdown-content {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--main-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="language-selector">
+            <a href="?lang=ru">Русский</a>
+            <a href="?lang=kz">Қазақ</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <nav>
+                <div class="nav-dropdown">
+                    <a href="index.html" onclick="toggleMenu(event)">Главная</a>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="books.html">Книги</a>
+                        <a href="poems.html">Стихи</a>
+                        <a href="about.html">Обо мне</a>
+                        <a href="contact.html">Контакты</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Произведения</h1>
+            <p>Книги и стихи Олжаса Сулейменова</p>
+        </section>
+
+        <section class="books-section">
+            <h2>Книги</h2>
+            <div class="books-grid">
+                <div id="asia" class="book-card">
+                    <img src="images/azia.jpg" alt="Книга 'АЗиЯ'">
+                    <div class="book-info">
+                        <h3>АЗиЯ</h3>
+                        <div class="book-metadata">
+                            <p><strong>Год издания:</strong> 1975</p>
+                            <p><strong>Жанр:</strong> Историческое исследование</p>
+                            <p><strong>Издательство:</strong> Жазушы</p>
+                        </div>
+                        <div class="book-description">
+                            <p>Фундаментальное исследование, в котором автор раскрывает глубокие исторические и культурные связи между тюркским и славянским мирами. Книга представляет собой уникальный взгляд на историю евразийских народов.</p>
+                            <p>В этой работе Олжас Сулейменов исследует древние связи между тюркской и славянской культурами через призму лингвистики и истории.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <img src="images/clay-book.jpg" alt="Глиняная книга">
+                    <div class="book-info">
+                        <h3>Глиняная книга</h3>
+                        <div class="book-metadata">
+                            <p><strong>Год издания:</strong> 1969</p>
+                            <p><strong>Жанр:</strong> Поэзия</p>
+                            <p><strong>Издательство:</strong> Жазушы</p>
+                            <p><strong>Количество страниц:</strong> 252</p>
+                            <p><strong>Язык:</strong> Русский</p>
+                        </div>
+                        <div class="book-description">
+                            <p>«Глиняная книга» — одно из самых значительных произведений Олжаса Сулейменова. Это поэма, в которой автор мастерски переплетает древнюю историю с современностью, создавая уникальное повествование о культуре и традициях тюркских народов.</p>
+                            <p>В основе поэмы лежат реальные исторические события и документы. Автор использует древние тексты, найденные на глиняных табличках, чтобы воссоздать картину жизни древних народов и их взаимоотношений.</p>
+                            <p>Произведение получило широкое признание и было переведено на многие языки мира, став одним из ключевых произведений в творчестве поэта.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="poetry-section">
+            <h2>Избранные стихотворения</h2>
+            
+            <div class="poem-card">
+                <h3>Земля, поклонись человеку!</h3>
+                <div class="poem-metadata">
+                    <p><strong>Год:</strong> 1961</p>
+                </div>
+                <div class="poem-text">
+                    <p>Земля,<br>
+                    Земля,<br>
+                    Я — твой сын,<br>
+                    Я — твой первый<br>
+                    Космический сын!..</p>
+                    
+                    <p>Ты меня родила,<br>
+                    Я твой первенец,<br>
+                    Я сегодня<br>
+                    Вернулся к тебе...</p>
+                </div>
+            </div>
+
+            <div class="poem-card">
+                <h3>Айналайн</h3>
+                <div class="poem-metadata">
+                    <p><strong>Год:</strong> 1963</p>
+                </div>
+                <div class="poem-text">
+                    <p>Степь, ты меня воспитала,<br>
+                    Я твой подросший птенец.<br>
+                    Мне колыбелью ты стала,<br>
+                    Степь — мой родной отец.</p>
+                </div>
+            </div>
+
+            <div class="poem-card">
+                <h3>Волчата</h3>
+                <div class="poem-metadata">
+                    <p><strong>Год:</strong> 1962</p>
+                </div>
+                <div class="poem-text">
+                    <p>Мы пришли в этот мир,<br>
+                    Чтобы мир изменить,<br>
+                    Чтобы новую песню<br>
+                    О жизни сложить.</p>
+                    
+                    <p>Мы — волчата,<br>
+                    Степные волчата,<br>
+                    Нам не спится в уюте квартир...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакты: +7 778 453 7971</p>
+        <p>&copy; 2024 Все права защищены</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.preventDefault();
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Закрыть выпадающее меню при клике вне его
+        window.onclick = function(event) {
+            if (!event.target.matches('.nav-dropdown a')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html> 
