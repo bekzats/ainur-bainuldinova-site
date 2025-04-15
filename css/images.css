@@ -47,7 +47,7 @@
 
     /* Specific position for the FIRST service image on mobile */
     .services-grid .service-card:nth-child(1) .service-image {
-         background-position: center 15% !important; /* Higher focus for the first */
+         background-position: center 10% !important; /* Focus slightly higher (from 15%) */
     }
         
     .profile-image {
