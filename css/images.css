@@ -45,6 +45,10 @@
         height: 250px;
     }
     
+    .service-image img {
+        object-position: center 15% !important;
+    }
+    
     .profile-image {
         height: 350px;
     }
