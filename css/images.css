@@ -42,7 +42,7 @@
 
 @media (max-width: 480px) {
     .service-image {
-        height: 250px;
+        height: 180px;
     }
     
     /* General rule for mobile service images */
