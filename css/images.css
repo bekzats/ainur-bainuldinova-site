@@ -41,16 +41,23 @@
 }
 
 @media (max-width: 480px) {
+    /* General height for service images on mobile */
     .service-image {
-        height: 180px;
+        height: 180px; 
     }
     
-    /* General rule for mobile service images */
+    /* Specific height for 2nd and 3rd service images on mobile */
+    .services-grid .service-card:nth-child(2) .service-image,
+    .services-grid .service-card:nth-child(3) .service-image {
+        height: 150px; /* Make 2nd and 3rd shorter */
+    }
+
+    /* General rule for mobile service images positioning */
     .service-image img {
         object-position: center top !important; 
     }
 
-    /* Specific rule for 2nd and 3rd service images on mobile */
+    /* Specific rule for 2nd and 3rd service images on mobile positioning */
     .services-grid .service-card:nth-child(2) .service-image img,
     .services-grid .service-card:nth-child(3) .service-image img {
         object-position: center 0% !important; /* Focus on very top */
