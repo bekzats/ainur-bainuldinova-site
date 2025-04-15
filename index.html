@@ -489,18 +489,22 @@
     </style>
 </head>
 <body>
-    <section class="hero">
-        <img src="images/hero-bg.jpg" alt="Фото певицы" class="hero-background">
-        <div class="hero-content">
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
             <h1>Айнур Байнулдинова</h1>
-            <p class="subtitle">Певица • Ведущая • Организатор мероприятий</p>
-            <a href="#contact" class="cta-button">Заказать выступление</a>
-            <div class="social-links">
-                <a href="https://www.instagram.com/reel/DEoroUNtxPb/?igsh=MWd0bXc3MGV2MWxuYg==" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://vm.tiktok.com/ZMBgYet9K/" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://youtu.be/K1L6MTWh0W0?si=TcqH_I6JWtpcqaJM" target="_blank"><i class="fab fa-youtube"></i></a>
-            </div>
+            <h2>Певица • Ведущая • Организатор мероприятий</h2>
+            <p>Создаю незабываемую атмосферу на вашем празднике</p>
+            <a href="#contact" class="button">Связаться со мной</a>
         </div>
+        <picture>
+            <source srcset="images/hero-bg-large.webp 1920w,
+                             images/hero-bg-medium.webp 1024w,
+                             images/hero-bg-small.webp 640w"
+                    sizes="100vw"
+                    type="image/webp">
+            <source srcset="images/hero-bg.jpg" type="image/jpeg">
+            <img src="images/hero-bg-small.webp" alt="Айнур Байнулдинова - фоновое изображение" class="hero-background">
+        </picture>
     </section>
 
     <section class="about">
